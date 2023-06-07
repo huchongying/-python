@@ -37,5 +37,23 @@ python3 -m venv venv
   ```
 5. 安装项目依赖：
 ```pip install -r requirements.txt```
+```pip install django```
+```pip install mysqlclient```
 6. 运行数据库迁移：
 ```python manage.py migrate```
+7.对数据库内容进行修改，在根目录的settings.py文件下的：
+···
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myblog',
+        'USER': 'root',
+        'PASSWORD': '20020221',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+    }
+}
+···
+对数据库名和数据库账户进行相应的修改
+
+8.终端中输入···py manage.py runserver···

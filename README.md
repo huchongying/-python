@@ -42,7 +42,7 @@ python3 -m venv venv
 6. 运行数据库迁移：
 ```python manage.py migrate```
 7.对数据库内容进行修改，在根目录的settings.py文件下的：
-···
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -53,7 +53,7 @@ DATABASES = {
         'PORT': 3306,
     }
 }
-···
+```
 对数据库名和数据库账户进行相应的修改
 
 8.终端中输入···py manage.py runserver···

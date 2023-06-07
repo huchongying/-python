@@ -23,6 +23,9 @@ django+layui+swiper
 ## 部署说明
 1. 确保服务器环境中已安装Python和Django框架。
 2. 克隆项目代码到服务器本地目录。
+```
+git clone https://github.com/huchongying/-python.git
+```
 3. 在项目根目录中创建虚拟环境，可以使用以下命令：
 python3 -m venv venv
 

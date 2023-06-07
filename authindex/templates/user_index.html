@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %} <title>登录</title> {% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/layui@2.8.0/dist/css/layui.css">
+    <script src="https://cdn.jsdelivr.net/npm/layui@2.8.0/dist/layui.js"></script>
+    <link rel="stylesheet" href="{% static '/upload/css/index.css' %}">
+    <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<!-- 头部 -->
+<div class="header layui-col-xs12 layui-col-md-12">
+    <ul class="layui-nav nav-content layui-col-xs12 layui-col-md-12" lay-filter="">
+        <li class="layui-nav-item"><a href="#">学校简介</a></li>
+        <li class="layui-nav-item layui-this"><a href="#">党政教育</a></li>
+        <li class="layui-nav-item"><a href="#">学工系统</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">教育</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">名师介绍</a></dd>
+                <dd><a href="">国际交流</a></dd>
+                <dd><a href="">教务系统</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">信箱</a></li>
+        <li class="layui-nav-item"><a href="{% url 'users:login' %}" target="_blank">登录</a></li>
+        <li class="layui-nav-item"><a href="{% url 'users:register' %}" target="_blank">注册</a></li>
+    </ul>
+</div>
+
+<!-- 使用layui做的轮播图 -->
+<!-- <div class="layui-carousel" id="carousel">
+    <div carousel-item>
+        <div><img src="{% static 'upload/ban2.png' %}"></div>
+        <div><img src="{% static 'upload/ban1.png' %}"></div>
+        <div><img src="{% static 'upload/ban1.png' %}"></div>
+    </div>
+</div> -->
+
+<!-- 使用swiper做的轮播图 -->
+<div class="swiper-container">
+    <div class="swiper-wrapper layui-col-xs12">
+        <div class="swiper-slide">
+            <div class="slide-content">
+                <video controls onmousemove="cxk()" class="cxk" muted autoplay style="width: 100%;">
+                    <source src="{% static 'upload/css/nhky.mp4' %}" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-content">
+                <video controls>
+                    <source src="{% static 'upload/css/kk.mp4' %}" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+        <!-- Add more video slides as needed -->
+    </div>
+
+    <!-- Add pagination and navigation buttons if desired -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+
+<!-- 文章部分 -->
+<div class="layui-main">
+    <div class="layui-article">
+        <div class="filed layui-col-md6 layui-col-xs12">
+            <img src="http://kjxy.nchu.edu.cn/Upload/main/ContentManage/Article/image/2023/06/07/883e7f32b5b54e24a313b76d1a6941c0.jpg"
+                alt="" class="layui-col-md12 article-img">
+            <div class="layui-elem-field card-section" style="margin-top: 20px; float: left;">
+                <div class="news-category">
+                    <a href="#">
+                        <span class="show-for-sr"></span>
+                        院长李冰颖带队赴共青城访企拓岗 
+                    </a>
+                </div>
+                <legend style="    font-size: 1.875rem; margin-top: 25px;">院长李冰颖带队赴江西中航</legend>
+                <div class="layui-field-box context">
+                    5月31日，院长李冰颖带队赴江西中航共青城实业有限公司下设子公司庐山国际高尔夫球会有限公司和共青城格兰云天国际酒店走访调研，副院长肖文波及艺术学部负责人及相关工作人员陪同。
+
+                    受访单位负责人对我院一行的到来表示欢迎，并通过企业宣传片介绍了公司的发展历程和规模现状。艺术学部主任徐国立教授就我院学部专业设置、人才培养及未来发展等方面情况作简要介绍。同时，双方围绕校企合作基地建设和“实习+就业”合作模式等内容展开深入交流与探讨。
+                    
+                    院长李冰颖表示，学院将进一步做好结合文章，深化校企合作，努力实现人才与岗位的精准适配，共同推进协同育人和校企互惠共赢。
+                </div>
+                <div class="readmore">
+                    更多
+                    <i class="layui-icon layui-icon-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="filed layui-col-md6 layui-col-xs12">
+            <img src="http://kjxy.nchu.edu.cn/Upload/main/ContentManage/Article/image/2023/06/07/bd3ad55042854c50a90e5b5c3722a598.jpg"
+                alt="" class="layui-col-md12 article-img">
+            <div class="layui-elem-field card-section" style="margin-top: 20px; float: left;">
+                <div class="news-category">
+                    <a href="#">
+                        <span class="show-for-sr"></span>
+                        我院召开第四届教职工暨工会会员代表大会第一次会议 
+                    </a>
+                </div>
+                <legend style="    font-size: 1.875rem; margin-top: 25px;">学院召开第四届教职工暨工会会员代表大会第一次会议</legend>
+                <div class="layui-field-box context">
+                    6月1日下午，我院第四届教职工暨工会会员代表大会第一次会议在行政楼学术报告厅召开，全体院领导、教职工代表参加本次会议。会议由工会主席主持。
+
+                    大会在庄严肃穆的国歌声中拉开帷幕。
+                    
+                    院长李冰颖作《院长工作报告》。她对过去五年学院的主要工作进行了全面总结和回顾，认真梳理了学院取得的突出成绩和事业发展成就，充分肯定了全体教职工为学院建设作出的贡献。同时就学院2023年工作提出要求：第一，要根据上级部署要求，积极稳妥推进学院转设；第二，要强化学科专业建设，夯实专业建设基础；第三，要推进人才强校战略，着力打造人才队伍；第四，要加强教学科研工作，努力提升学术研究水平；第五，要加快教育教学改革，切实提高人才培养质量；第六，要全面促进协同育人，持续构建全员育人格局；第七，要不断深化校企合作，有序推进产业学院建设。
+                </div>
+                <div class="readmore">
+                    更多
+                    <i class="layui-icon layui-icon-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="filed layui-col-md6 layui-col-xs12">
+            <img src="http://kjxy.nchu.edu.cn/Upload/main/ContentManage/Article/image/2023/06/05/589f567d4b5c435bb4c9a34b3fbe2b43.png"
+                alt="" class="layui-col-md12 article-img">
+            <div class="layui-elem-field card-section" style="margin-top: 20px; float: left;">
+                <div class="news-category">
+                    <a href="#">
+                        <span class="show-for-sr"></span>
+                        院领导一行前往共青兄弟院校调研交流 
+                    </a>
+                </div>
+                <legend style="    font-size: 1.875rem; margin-top: 25px;">青兄弟院校调研交流</legend>
+                <div class="layui-field-box context">
+                    5月30日、31日，院长李冰颖、副院长江天光、人事处处长等人分别赴江西农业大学南昌商学院、江西师范大学科学技术学院、江西财经大学现代经济管理学院、南昌大学科学技术学院开展调研交流。
+
+兄弟院校相关领导及人事相关负责人热情接待了李冰颖一行，双方分别就各自学院的各级各类人员收入，社保、医保、住房公积金缴纳，青年教师培养等方面情况作详细介绍。
+
+李冰颖对共青兄弟院校的热情接待表示感谢，对兄弟院校在人事管理、薪酬福利、职称评审工作中好的经验和做法表示了充分肯定。在向兄弟院校学习取经的同时，也分享了我院的良好做法和积极成效。双方还表达了在人事工作上继续加强深入学习交流的良好意愿。
+
+此次调研活动，加强了与兄弟院校之间的交流学习，有利于学院在借鉴兄弟院校宝贵经验的基础上，具体结合工作实际，继续稳步推进学院人事制度改革各项工作。
+                </div>
+                <div class="readmore">
+                    更多
+                    <i class="layui-icon layui-icon-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="filed layui-col-md6 layui-col-xs12">
+            <img src="http://kjxy.nchu.edu.cn/Upload/main/ContentManage/Article/image/2023/06/07/883e7f32b5b54e24a313b76d1a6941c0.jpg"
+                alt="" class="layui-col-md12 article-img">
+            <div class="layui-elem-field card-section" style="margin-top: 20px; float: left;">
+                <div class="news-category">
+                    <a href="#">
+                        <span class="show-for-sr"></span>
+                        院长李冰颖带队赴共青城访企拓岗 
+                    </a>
+                </div>
+                <legend style="    font-size: 1.875rem; margin-top: 25px;">院长李冰颖带队赴江西中航</legend>
+                <div class="layui-field-box context">
+                    5月31日，院长李冰颖带队赴江西中航共青城实业有限公司下设子公司庐山国际高尔夫球会有限公司和共青城格兰云天国际酒店走访调研，副院长肖文波及艺术学部负责人及相关工作人员陪同。
+
+                    受访单位负责人对我院一行的到来表示欢迎，并通过企业宣传片介绍了公司的发展历程和规模现状。艺术学部主任徐国立教授就我院学部专业设置、人才培养及未来发展等方面情况作简要介绍。同时，双方围绕校企合作基地建设和“实习+就业”合作模式等内容展开深入交流与探讨。
+                    
+                    院长李冰颖表示，学院将进一步做好结合文章，深化校企合作，努力实现人才与岗位的精准适配，共同推进协同育人和校企互惠共赢。
+                </div>
+                <div class="readmore">
+                    更多
+                    <i class="layui-icon layui-icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- cxk部分 -->
+<div class="layui-main">
+    <div class="cxk-content layui-col-md12 ">
+        <img src="{% static 'upload/css/cxk.gif' %}" onmouseover="play()">
+        <audio src="{% static 'upload/css/ganma.mp3' %}" id="audio"></audio>
+
+    </div>
+</div>
+<div id="live2d-widget" class="live2d-widget-container"
+    style="position: fixed; right: 0px; bottom: -20px; width: 200px; height: 400px; z-index: 99999; opacity: 1; pointer-events: none;">
+    <div class="live2d-widget-dialog-container" style="transform: scale(0.8);">
+        <div class="live2d-widget-dialog"></div>
+    </div><canvas id="live2dcanvas" width="400" height="800"
+        style="position: absolute; left: 0px; top: 0px; width: 200px; height: 400px;"></canvas>
+</div>
+
+
+<!-- 尾部 -->
+
+<div class="layui-footer footer footer-doc layui-col-md12" style="margin-top: 40px; margin-bottom: 40px;">
+    <div class="layui-main">
+        <p class="layui-col-md6">2017 © <a href="/">layui.com</a> MIT license</p>
+        <p class="layui-col-md6">
+            <a href="http://fly.layui.com/jie/3147.html" target="_blank" class="layui-col-md3">捐赠作者</a>
+            <a href="javascript:layer.msg('暂无此页');" class="layui-col-md3">关于我们</a>
+            <a href="mailto:xianxin@layui.com">合作联系</a>
+            <a href="https://github.com/sentsin/layui/" target="_blank" class="layui-col-md2">Git仓库</a>
+            <a href="http://fly.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+        </p>
+    </div>
+</div>
+<script>
+    layui.use(['carousel'], function () {
+        var carousel = layui.carousel;
+
+        // Initialize the carousel
+        carousel.render({
+            elem: '#carousel',
+            width: '100%',
+            height: '388px',
+            arrow: 'always',
+            autoplay: true,
+            interval: 1000,
+        });
+    });
+
+
+    //点击cxk-content播放音频
+    function play() {
+        var audio = document.getElementById("audio");
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+    // Initialize Swiper
+    // 初始化 Swiper
+    var swiper = new Swiper('.swiper-container', {
+        loop: true, // 循环播放
+        autoplay: {
+            delay: 50000, // 播放间隔时间，单位：毫秒
+            disableOnInteraction: false, // 用户操作时是否禁止自动播放
+        },
+        pagination: {
+            el: '.swiper-pagination', // 分页器元素
+        },
+        navigation: {
+            nextEl: '.swiper-button-next', // 下一页按钮元素
+            prevEl: '.swiper-button-prev', // 上一页按钮元素
+        },
+    });
+    // 获取视频轮播图容器元素
+    var swiperContainer = document.querySelector('.cxk');
+
+    // 监听鼠标移入事件
+    swiperContainer.addEventListener('mouseenter', function () {
+        // 获取当前 Swiper 实例
+        var swiper = this.swiper;
+        // 停止自动播放
+        swiper.autoplay.stop();
+    });
+
+    // 监听鼠标移出事件
+    swiperContainer.addEventListener('mouseleave', function () {
+        // 获取当前 Swiper 实例
+        var swiper = this.swiper;
+        // 开始自动播放
+        swiper.autoplay.start();
+    });
+
+    (function() {
+        var a_idx = 0;
+        window.onclick = function(event) {
+          var a = new Array(
+            "❤富强❤",
+            "❤民主❤",
+            "❤文明❤",
+            "❤和谐❤",
+            "❤自由❤",
+            "❤平等❤",
+            "❤公正❤",
+            "❤法治❤",
+            "❤爱国❤",
+            "❤敬业❤",
+            "❤诚信❤",
+            "❤友善❤"
+          );
+
+          var dom = document.createElement("b"); //创建b元素
+          dom.onselectstart = new Function("event.returnValue=false"); //防止拖动
+
+          document.body.appendChild(dom).innerHTML = a[a_idx]; //将b元素添加到页面上
+          a_idx = (a_idx + 1) % a.length;
+          dom.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+
+          var f = 16, // 字体大小
+            x = event.clientX - f / 2, // 横坐标
+            y = event.clientY - f, // 纵坐标
+            c = randomColor(), // 随机颜色
+            a = 1, // 透明度
+            s = 1.2; // 放大缩小
+
+          var timer = setInterval(function() {
+            //添加定时器
+            if (a <= 0) {
+              document.body.removeChild(dom);
+              clearInterval(timer);
+            } else {
+              dom.style.cssText =
+                "font-size:16px;cursor: default;position: fixed;color:" +
+                c +
+                ";left:" +
+                x +
+                "px;top:" +
+                y +
+                "px;opacity:" +
+                a +
+                ";transform:scale(" +
+                s +
+                ");";
+
+              y--;
+              a -= 0.016;
+              s += 0.002;
+            }
+          }, 15);
+        };
+        // 随机颜色
+        function randomColor() {
+          return (
+            "rgb(" +
+            ~~(Math.random() * 255) +
+            "," +
+            ~~(Math.random() * 255) +
+            "," +
+            ~~(Math.random() * 255) +
+            ")"
+          );
+        }
+      })();
+
+</script>
+</body>
+
+</html>

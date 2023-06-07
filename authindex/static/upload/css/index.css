@@ -1,0 +1,89 @@
+.demo-login-container {
+    width: 100%;
+    height: 50%;
+    margin: 21px auto 0;
+}
+
+.demo-login-other .layui-icon {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    top: 2px;
+    font-size: 26px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.container-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+/* 文章部分 */
+.filed{
+    margin-top: 20px;
+}
+
+.filed .context{
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+}
+
+.filed .readmore{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .875rem;
+}
+
+.article-img{
+    margin-left:10px;
+    width: 97%;
+}
+
+
+.card-section{
+    position: relative;
+}
+
+.news-category{
+    border-top: 4px solid #e97500;
+    padding-top: 0.25rem;
+    text-transform: uppercase;
+    top: 0;
+    font-size: .75rem;
+    position: absolute;
+    padding-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.news-category .show-for-sr{
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* cxk部分 */
+/* .cxk-content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+} */
+  
+/* 尾部 */
